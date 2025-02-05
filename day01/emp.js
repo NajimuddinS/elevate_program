@@ -15,7 +15,7 @@ const employees = [
   activeEmployees=employees.filter((employees)=>(employees.status==="active"))
   sortedSalary=activeEmployees.sort((a,b)=>b.activeEmployees-a.activeEmployees)
   grpByDepartment=Object.groupBy(sortedSalary,({department})=>department)
-  combinedData=grpByDepartment.push(...departmentBudgets)
+//   combinedData=grpByDepartment.push(...departmentBudgets)
 //   console.log(grpByDepartment)
   console.log(combinedData)
 
