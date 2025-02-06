@@ -11,18 +11,33 @@ const employees = [
     Engineering: 200000,
     Marketing: 100000
   };
+
   
-  activeEmployees=employees.filter((employees)=>(employees.status==="active"))
-  sortedSalary=activeEmployees.sort((a,b)=>b.activeEmployees-a.activeEmployees)
-  grpByDepartment=Object.groupBy(sortedSalary,({department})=>department)
-//   combinedData=grpByDepartment.push(...departmentBudgets)
-//   console.log(grpByDepartment)
-  console.log(combinedData)
+const filteredData = employees.filter(el=> el.status=="active")
+let departments = {}
+for(let i=0;i<employees.length;i++){
+  let dep = employees[i].department;
+//   console.log(dep)
+  let salary = employees[i].salary;
+//   console.log(salary)
+  let name = employees[i].name;
+  if(departments[dep] == undefined){
+    departments[dep] = []
+    departments[dep].push({name,salary})
+  }else{
+    departments[dep].push({name,salary})
+  }
+}
 
-
-
-//   activeEmployees=employees.filter((employees)=>(employees.status==="active"))
-//   grpByDepartment=Object.groupBy(activeEmployees,({department})=>department)
-//   sortedSalary=activeEmployees.sort((a,b)=>b.activeEmployees-a.activeEmployees)
-
-//   console.log(grpByDepartment)
+let res = []
+for(let department in departments){
+  let employees = departments[department]
+  let totalSalary = 0
+  for(let i=0;i<employees.length;i++){
+    totalSalary+=employees[i].salary
+  }
+  let departmentBudget = departmentBudgets[department]
+  let isOverBudget = departmentBudget < totalSalary
+  res.push({department, employees, totalSalary, departmentBudget, isOverBudget})
+}
+console.log(JSON.stringify(res))
