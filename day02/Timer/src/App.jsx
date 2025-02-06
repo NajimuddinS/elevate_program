@@ -4,7 +4,6 @@ import './App.css'
 function App() {
   const [count, setCount] = useState(0)
   const timer = useRef(null)
-  // () => 
   function start(){
     if(timer.current===null){
       timer.current=setInterval(() => {
