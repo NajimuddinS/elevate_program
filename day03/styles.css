@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.heading {
+    padding: 10px;
+}
+
+.container {
+    padding: 10px;
+}
+
+.add-btn {
+    margin-top: 10px;
+    padding: 5px 15px;
+}
+
+.task-list {
+    margin-top:10px;
+}
+
+.tasks {
+    margin-top:10px;
+}
+
