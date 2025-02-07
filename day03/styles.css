@@ -18,7 +18,9 @@
     margin-bottom: 50px;
     background-color: rgb(208, 241, 247);
     border-radius: 20px;
-
+    select {
+        margin-bottom: 10px;
+    }
 }
 
 .main-container {
