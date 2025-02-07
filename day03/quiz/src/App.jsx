@@ -44,15 +44,14 @@ function App() {
   ];
   
   function submit() {
-    
+
   }
   
   return (
     <>
       <div>
         <h1>Quiz</h1>
-        {
-          mcqQuestions.map((questions)=> {
+        {mcqQuestions.map((questions)=> {
             <div>
               <h2>{questions.question}</h2>
               <ol>
@@ -67,9 +66,7 @@ function App() {
               </ol>
               <button onClick={submit} type="submit"></button>
             </div>
-          })
-        }
-
+          })}
       </div>
     </>
   )
