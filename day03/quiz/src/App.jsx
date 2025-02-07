@@ -2,7 +2,7 @@ import { useRef, useState } from 'react'
 import './App.css'
 
 function App() {
-  const [min, setMin] = useState(0)
+  const [min, setMin] = useState(5)
   const timer= useRef(null)
 
   const mcqQuestions = [
@@ -48,8 +48,16 @@ function App() {
   }
 
   function timer(){
-
+    if (timer.current==null){
+      timer.current=setInterval(() => {
+        if (min<0){
+          setMin((min)=>min-1)
+        }
+      }, 60000);
+    }
   }
+
+  timer()
   
   return (
     <>
@@ -58,7 +66,7 @@ function App() {
         {mcqQuestions.map((questions)=> {
             <div>
               <h2>{questions.question}</h2>
-              <h1>{}</h1>
+              <h1>{min}:</h1>
               <ol>
                 <li>{questions.options[0]}</li>
                 <input type="radio" name="first" id="first" />
