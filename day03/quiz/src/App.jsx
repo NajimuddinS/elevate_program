@@ -1,10 +1,10 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { useRef, useState } from 'react'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [min, setMin] = useState(0)
+  const timer= useRef(null)
+
   const mcqQuestions = [
     {
       id: 1,
@@ -46,6 +46,10 @@ function App() {
   function submit() {
 
   }
+
+  function timer(){
+
+  }
   
   return (
     <>
@@ -54,6 +58,7 @@ function App() {
         {mcqQuestions.map((questions)=> {
             <div>
               <h2>{questions.question}</h2>
+              <h1>{}</h1>
               <ol>
                 <li>{questions.options[0]}</li>
                 <input type="radio" name="first" id="first" />
