@@ -4,18 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
+    <title>Task Management</title>
 </head>
-<body>
+<body> 
+    <div class="main-container">
     <div class="heading">
         <h1>Task Managment</h1>
     </div>
     <div class="container">
-        <label for="">Title</label>
+        <label for="">Title: </label>
         <input type="text" name="" id="title">
-        <label for="">Description</label>
+        <label for="">Description: </label>
         <input type="text" name="" id="">
-        <label for="priority-select">Priority</label>
+        <label for="priority-select">Priority: </label>
         <select name="priority" id="priority-select">
         <option value="">--Please choose an option--</option>
         <option value="high">High</option>
@@ -24,7 +25,7 @@
         </select><br>
         <button class="add-btn">Add</button>
     </div>
-    <div class="heading">
+    <div class="heading-task">
         <h1>Tasks</h1>
         <div class="task-list">
             <label for="filter-select">Filter: </label>
@@ -44,13 +45,13 @@
         </div>
         <div class="tasks" id="tasks">
             <ul>
-                <li>first task</li>
-                <li>second task</li>
-                <li>third task</li>
+                <li>first task <span><input type="checkbox" name="" id=""></span> </li>
+                <li>second task <span><input type="checkbox" name="" id=""></span> </li>
+                <li>third task <span><input type="checkbox" name="" id=""></span> </li>
             </ul>
         </div>
     </div>
-
+</div>
 <script src="./script.js"></script>
 </body>
 </html>

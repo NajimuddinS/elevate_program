@@ -1,5 +1,6 @@
 function getData(){
     const title=document.getElementById("title")
+    
 }
 
 function tables(){

@@ -2,26 +2,56 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;;
 }
 
 .heading {
     padding: 10px;
+
+    h1{
+        text-align: center;
+    }
 }
 
 .container {
-    padding: 10px;
+    padding: 20px;
+    margin-bottom: 50px;
+    background-color: rgb(208, 241, 247);
+    border-radius: 20px;
+
+}
+
+.main-container {
+    max-width: 1300px;
+    margin:auto;
 }
 
 .add-btn {
     margin-top: 10px;
     padding: 5px 15px;
+    border: none;
+    background-color: rgb(110, 211, 110);
+    border-radius: 5px;
 }
 
 .task-list {
     margin-top:10px;
+    background-color: rgb(255, 199, 199);
+    padding: 20px;
+    border-radius: 20px;
 }
 
 .tasks {
     margin-top:10px;
 }
+
+.heading-task {
+    h1{
+        text-align: center;
+    }
+}
+
+
+
+
 
