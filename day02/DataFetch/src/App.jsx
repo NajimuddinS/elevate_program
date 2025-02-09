@@ -27,7 +27,7 @@ function App() {
   
   return (
     <>
-      <div className="card">
+      {/* <div className="card">
         {data.map((posts)=>(
         <table>
           <tr>
@@ -37,7 +37,22 @@ function App() {
           </tr>
       </table>
         ))}
-      </div>
+      </div> */}
+      <div>
+      <h1>Posts</h1>
+      {data.length > 0 ? (
+        <ul>
+          {data.map((post) => (
+            <li key={post.id}>
+              <strong>{post.title}</strong>
+              <p>{post.body}</p>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p>Loading...</p>
+      )}
+    </div>
     </>
   )
 }
