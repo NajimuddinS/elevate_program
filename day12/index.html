@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Notes Management</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="heading">
+        <h1>Notes Managment</h1>
+      </div>
+      <div class="container">
+        <form>
+          <label for="">Title: </label>
+          <input type="text" name="" id="title" required />
+          <label for="">Content: </label>
+          <input type="text" name="" id="desc" required />
+          <label for="priority-select">Category: </label>
+          <select name="priority" id="category-select">
+            <option value="">--Please choose an option--</option>
+            <option value="Work">Work</option>
+            <option value="Personal">Personal</option>
+            <option value="Misc">Misc</option></select
+          ><br />
+          <button type="button" class="add-btn" id="add">Add</button>
+        </form>
+      </div>
+      <div class="heading-task">
+        <h1>Notes</h1>
+        <div class="task-list">
+          <label for="filter-select">Filter: </label>
+          <select name="filter" id="filter-select">
+            <option value="">--Please choose an option--</option>
+            <option value="Work">Work</option>
+            <option value="Personal">Personal</option>
+            <option value="Misc">Misc</option>
+          </select>
+          <label for="filter-select">Sort: </label>
+          <select name="filter" id="filter-select">
+            <option value="">--Please choose an option--</option>
+            <option value="asc">Ascending</option>
+            <option value="des">Descending</option>
+            <option value="priority">Priority</option>
+          </select>
+        </div>
+        <div class="tasks" id="tasks">
+          <!-- <ul>
+            <li>
+              first task <span><input type="checkbox" name="" id="" /></span>
+            </li>
+            <li>
+              second task <span><input type="checkbox" name="" id="" /></span>
+            </li>
+            <li>
+              third task <span><input type="checkbox" name="" id="" /></span>
+            </li>
+          </ul> -->
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
